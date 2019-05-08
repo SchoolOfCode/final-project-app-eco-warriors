@@ -10,7 +10,9 @@ import {
   Icon,
   CardList
 } from "@99xt/first-born";
+import { AntDesign, Feather } from "@expo/vector-icons";
 import MenuBar from "../final-project-app-eco-warriors/pages/components/MenuBar";
+import Header from "../final-project-app-eco-warriors/pages/components/Header";
 
 export default class App extends React.Component {
   render() {
@@ -53,23 +55,27 @@ export default class App extends React.Component {
       // </LinearGradient>
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={{ color: "white" }}>Interests</Text>
+          <View style={styles.header2}>
+            <AntDesign name="arrowleft" size={25} color="white" />
+            <Text style={{ color: "white", fontSize: 20 }}>Profile</Text>
+            <Feather name="log-out" size={25} color="white" />
+          </View>
         </View>
         <View style={styles.carousel}>
           <Image
-            style={{ height: 125, width: 125 }}
+            style={{ height: 125, width: 125, marginLeft: 3, marginRight: 3 }}
             source={require("./assets/530878d8-gp0stt3fm.jpg")}
           />
           <Image
-            style={{ height: 125, width: 125 }}
+            style={{ height: 125, width: 125, marginLeft: 3, marginRight: 3 }}
             source={require("./assets/530878d8-gp0stt3fm.jpg")}
           />
           <Image
-            style={{ height: 125, width: 125 }}
+            style={{ height: 125, width: 125, marginLeft: 3, marginRight: 3 }}
             source={require("./assets/530878d8-gp0stt3fm.jpg")}
           />
           <Image
-            style={{ height: 125, width: 125 }}
+            style={{ height: 125, width: 125, marginLeft: 3, marginRight: 3 }}
             source={require("./assets/530878d8-gp0stt3fm.jpg")}
           />
         </View>
@@ -87,14 +93,20 @@ const styles = StyleSheet.create({
     // alignItems: "center"
   },
   header: {
-    backgroundColor: "#a2ea54",
-    height: "20%",
+    backgroundColor: "#669335",
+    height: "15%",
     width: "100%",
-    alignItems: "center",
-    justifyContent: "flex-end"
+    justifyContent: "center"
     // borderColor: "red",
     // borderStyle: "solid",
     // borderWidth: 2
+  },
+  header2: {
+    justifyContent: "space-between",
+    flexDirection: "row",
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 30
   },
   carousel: {
     flexDirection: "row",
@@ -105,7 +117,7 @@ const styles = StyleSheet.create({
     // borderWidth: 2
   },
   cards: {
-    height: "45%"
+    height: "50%"
     // borderColor: "red",
     // borderStyle: "solid",
     // borderWidth: 2
