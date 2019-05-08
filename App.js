@@ -1,7 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, View, Image } from "react-native";
 import { LinearGradient } from "expo";
-import { Input, Button } from "react-native-elements";
+import { Button, Input, Text, TabBar, TabItem, Icon } from "@99xt/first-born";
 
 export default class App extends React.Component {
   render() {
@@ -17,22 +17,14 @@ export default class App extends React.Component {
             }}
             source={require("./assets/white-leaf-png-6.png")}
           />
-          <Input placeholder="Username" />
-          <Input placeholder="Password" />
-          <Button
-            title="Log In"
-            buttonStyle={{
-              width: "150%",
-              margin: "6%",
-              backgroundColor: "white"
-            }}
-            titleStyle={{ color: "black" }}
-          />
-          <Button
-            title="Sign Up"
-            buttonStyle={{ width: "150%", backgroundColor: "white" }}
-            titleStyle={{ color: "black", textAlign: "center" }}
-          />
+          <Input placeholder="Username" color="secondary" />
+          <Input placeholder="Password" color="secondary" />
+          <Button block style={{ backgroundColor: "white" }}>
+            <Text style={{ color: "black" }}>Log In</Text>
+          </Button>
+          <Button style={{ backgroundColor: "white" }} block>
+            <Text style={{ color: "black" }}>Sign Up</Text>
+          </Button>
         </View>
       </LinearGradient>
     );
@@ -44,5 +36,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center"
+  },
+  menu: {
+    backgroundColor: "green"
   }
 });
